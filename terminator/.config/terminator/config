@@ -1,0 +1,20 @@
+[global_config]
+  enabled_plugins = CustomCommandsMenu, EditorPlugin, LaunchpadCodeURLHandler, APTURLHandler, Logger, LaunchpadBugURLHandler
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+  [[EditorPlugin]]
+    command = subl -a {filepath}:{line}
+    groups = file line
+    match = ([^ \t\n\r\f\v:]+?):([0-9]+)
+[profiles]
+  [[default]]
+    scrollback_infinite = True
+    scrollback_lines = 5000
